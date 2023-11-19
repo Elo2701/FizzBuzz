@@ -1,0 +1,53 @@
+# FizzBzz
+import java.util.ArrayList;
+import java.util.List;
+
+public class fizzBzz {
+    public static List<String> fizzBzz(int n){
+    	List<String> result= new ArrayList<>();
+    	for(int i=1; i<=n; i++) {
+    		if(i%3==0 && i%5==0) {
+    			result.add("FizzBuzz");
+    		}
+    		else if(i%3==0) {
+    			result.add("Fizz");
+    		}
+    		else if(i%5==0) {
+    			result.add("Buzz");
+    		}
+    		else
+    			
+    		result.add(Integer.toString(i));
+    	}
+    	return result;
+    }
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		int n=15;
+		List<String> result=fizzBzz(n);
+		for(String s:result) {
+			System.out.print(s + "\n");
+		}
+
+	}
+
+}
+
+/** output
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+**/
